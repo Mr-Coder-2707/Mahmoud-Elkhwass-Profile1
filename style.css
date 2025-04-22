@@ -1116,14 +1116,6 @@ section {
     background: #f1c40f;
     transform: scale(1.05);
   }
-
-  .card,
-  .project-card {
-    width: 90%; /* Percentage-based width instead of fixed */
-    height: auto;
-    min-height: 300px; /* Minimum height instead of fixed */
-    margin: 15px auto; /* Center cards */
-  }
 }
 
 .profile {
