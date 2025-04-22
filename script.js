@@ -446,13 +446,47 @@ document.addEventListener("DOMContentLoaded", function() {
       currentLang = "en";
       setLanguage(currentLang);
       localStorage.setItem("language", currentLang);
+      showTranslationNotification("🌍 Language switched to English");
     } else if (event.key.toLowerCase() === "a") {
       currentLang = "ar";
       setLanguage(currentLang);
       localStorage.setItem("language", currentLang);
+      showTranslationNotification("🌍 تم تغيير اللغة إلى العربية");
     }
   });
-  
+
+  function showTranslationNotification(message) {
+    const notification = document.createElement("div");
+    notification.id = "translation-notification";
+    notification.style.position = "fixed";
+    notification.style.top = "20px";
+    notification.style.left = "50%";
+    notification.style.transform = "translateX(-50%)";
+    notification.style.backgroundColor = document.body.classList.contains("light-mode") ? "#fff" : "#625C46FF";
+    notification.style.color = document.body.classList.contains("light-mode") ? "#000" : "#fff";
+    notification.style.padding = "10px 20px";
+    notification.style.borderRadius = "5px";
+    notification.style.zIndex = "2000";
+    notification.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
+    notification.style.opacity = "0";
+    notification.style.transition = "opacity 0.3s ease";
+    notification.textContent = message;
+
+    document.body.appendChild(notification);
+
+    // Animate in
+    setTimeout(() => {
+      notification.style.opacity = "1";
+    }, 10);
+
+    // Remove after 2 seconds
+    setTimeout(() => {
+      notification.style.opacity = "0";
+      setTimeout(() => {
+        notification.remove();
+      }, 300);
+    }, 2000);
+  }
   function setLanguage(lang) {
     // الكود الموجود مسبقاً
     
