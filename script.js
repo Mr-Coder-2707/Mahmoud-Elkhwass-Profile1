@@ -592,3 +592,41 @@ function showThemeNotification(message) {
   }, 2000);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    // Toggle menu on hamburger click
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    // Toggle menu on hamburger click
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
+});
+
