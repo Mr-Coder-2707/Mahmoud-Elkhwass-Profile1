@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function() {
       currentLang = "ar";
       setLanguage(currentLang);
       localStorage.setItem("language", currentLang);
-      showTranslationNotification("🌍 تم تغيير اللغة إلى العربية");
+      showTranslationNotification("Language switched to Arabic🌍");
     }
   });
 
@@ -591,42 +591,4 @@ function showThemeNotification(message) {
     }, 300);
   }, 2000);
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  if (menuToggle && navLinks) {
-    // Toggle menu on hamburger click
-    menuToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-      });
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  if (menuToggle && navLinks) {
-    // Toggle menu on hamburger click
-    menuToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-      });
-    });
-  }
-});
 
