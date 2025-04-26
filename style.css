@@ -54,8 +54,7 @@ nav {
   background: #000000;
   padding: 15px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-;  ;
-
+  z-index: 1000 !important;
 }
 
 nav a {
@@ -312,7 +311,6 @@ nav {
   margin-left: auto;
   top: 60px;
   left: 10px;
-  z-index: 9000 !important;
 }
 
 img {
@@ -498,7 +496,7 @@ nav {
   position: absolute;
   right: 30px;
   top: 15px;
-  z-index: 9998 !important;
+  z-index:  9998 !important;
 }
 
 .main {
@@ -1722,7 +1720,7 @@ body.light-mode {
   color: #2980b9;
 }
 
-light-mode .main h2,
+.light-mode .main h2,
 .light-mode .main h2 span {
   color: #2980b9;
 }
@@ -2434,77 +2432,4 @@ body.rtl {
     /* But keep it visible */
     display: block;
   }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #222;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
-}
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #222;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
-}
-@media (max-width: 768px) {
-  .nav-links {
-    z-index: 99999 !important;
-  }
-  .menu-toggle {
-    z-index: 100000 !important;
-  }
-}
-#particles-js {
-  z-index: 0 !important;
-}
-#loading-screen {
-  z-index: 999 !important;
-}
-nav {
-  z-index: 100001 !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-#navbar {
-  z-index: 100001 !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.nav-links {
-  z-index: 9000 !important;
-}
-#loading-screen {
-  z-index: 1000001 !important;
 }
