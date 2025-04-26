@@ -45,6 +45,10 @@ const translations = {
     "contact-title": "Contact",
     "phone": "Phone",
     "email": "Email",
+
+      // Contact action buttons
+    "call-now": "Call Now",
+    "send-email": "Send Email",
     
     // Footer
     "footer": "© Mr.Coder 2025",
@@ -99,6 +103,11 @@ const translations = {
     "contact-title": "اتصل بي",
     "phone": "الهاتف",
     "email": "البريد الإلكتروني",
+
+        // Contact action buttons
+    "call-now": "اتصل الآن",
+    "send-email": "أرسل بريد إلكتروني",
+
     
     // Footer
     "footer": "© مستر كودر ٢٠٢٥",
