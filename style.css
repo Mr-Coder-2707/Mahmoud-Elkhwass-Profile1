@@ -2051,7 +2051,7 @@ body.light-mode .theme-toggle .moon {
   --bg-dark: #000;
   --bg-light: #f5f5f5;
   --nav-dark: #333;
-  --nav-light: #ffffff;
+  --bg-light: #f8f9fa; /* softer light gray */
   --text-dark: #fff;
   --text-light: #333;
   --primary-color: #f1c40f;
@@ -2436,6 +2436,9 @@ body.rtl {
 
 
 
+
+
+
 /* Add this to the end of your CSS file */
 
 .contact-action-btn {
@@ -2473,4 +2476,52 @@ body.rtl {
 /* RTL support */
 .rtl .contact-action-btn {
   font-family: 'Arial', sans-serif;
+}
+
+
+.light-mode .services,
+.light-mode .projects,
+.light-mode .skills,
+.light-mode .contact {
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1); /* ظل خفيف */
+}
+
+
+:root {
+  /* ألوان الوضع الداكن */
+  --bg-dark: #000;
+  --section-dark: #2c3e50; /* لون الأقسام في الوضع الداكن */
+  
+  /* ألوان الوضع الفاتح */
+  --bg-light: #f8f9fa; /* الخلفية العامة */
+  --section-light: #e0e0e0; /* لون أغمق للأقسام في الوضع الفاتح */
+  
+  /* ألوان متناسقة */
+  --gold: #f1c40f;
+  --blue: #2980b9;
+}
+
+body.light-mode {
+  /* الخلفية العامة تبقى فاتحة */
+  background-color: var(--bg-light);
+}
+
+/* خدمات - Services */
+.light-mode .services {
+  background-color: var(--section-light);
+}
+
+/* مشاريع - Projects */
+.light-mode .projects {
+  background-color: var(--section-light);
+}
+
+/* مهارات - Skills */
+.light-mode .skills {
+  background-color: var(--section-light);
+}
+
+/* تواصل - Contact */
+.light-mode .contact {
+  background-color: var(--section-light);
 }
